@@ -1,0 +1,8 @@
+*.o
+app
+.nfs*
+.qmake.stash
+Makefile
+particlesCuda.pro.user
+
+build/*
