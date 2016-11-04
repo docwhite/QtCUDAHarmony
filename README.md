@@ -8,6 +8,17 @@ Change directory to where the particlesCuda.pro lives and run qmake-qt4 to
 generate a file out of the .pro file. ``qmake-qt4 particlesCuda.pro`` and then
 simply ``make``
 
+## Usage
+```  
+$ ./app [runOnGPU] [n] [seed]
+```
+
+Where:
+
+* **runOnGPU**: can be either 0 (run on CPU) or 1 (run on GPU)
+* **n**: can be any positive integer number
+* **seed**: a seed for the random functions */
+
 ## Compilation / Linking Steps Explained
 You can check out the .pro file and see all the steps that are carried on.
 
@@ -45,7 +56,6 @@ predeclaring the function wrapper at the top). The files get dropped to
 ### Step 3
 **g++** compiles and assembles (no linking) pure .cpp c++ files into 
 ``build/obj/{name}.o``. The ``-c`` flag is passed because we do not want linking yet.
-
 
 ### Step 4
 **nvcc** grabs all the ``*_cuda.o `` objects and generates a **dlink.o** file
