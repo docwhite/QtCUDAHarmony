@@ -4,9 +4,16 @@ and CUDA kernel .cu files at the same time and using a Qt project configuration
 file that does all the right steps to compile everything.
 
 ## Compiling
-Change directory to where the particlesCuda.pro lives and run qmake-qt4 to
-generate a file out of the .pro file. ``qmake-qt4 particlesCuda.pro`` and then
-simply ``make``
+Change directory to where the particlesCuda.pro lives and run qmake to
+generate a file out of the .pro file. ``qmake particlesCuda.pro`` and then
+simply ``make``. If don't have qmake make sure it is on your PATH variable.
+In the labs is under ``/opt/Qt5.7.0/5.7/gcc_64/bin`` so do:
+```
+$ export PATH=/opt/Qt5.7.0/5.7/gcc_64/bin:$PATH
+```
+And now you will be able to run qmake. **Do not use qmake-qt4** as won't
+work. We are using Qt5 feautures, like the built-in QOpenGLFunctions and
+the other OpenGL GUI-related items.
 
 ## Usage
 ```  
